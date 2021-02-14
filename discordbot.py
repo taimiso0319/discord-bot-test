@@ -21,7 +21,7 @@ async def ping(ctx):
 @bot.command()
 async def fizz(ctx):
     list_text = ['a','b','c','d','e','f']
-    random = random.randrange(5);
-    await ctx.send(list_text[random])
+    random_num = random.randrange(5);
+    await ctx.send(list_text[random_num])
 
 bot.run(token)

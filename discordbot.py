@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import random
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -19,6 +20,8 @@ async def ping(ctx):
 
 @bot.command()
 async def fizz(ctx):
-    await ctx.send('buzz')
+    list_text = ['a','b','c','d','e','f']
+    random = random.randrange(5);
+    await ctx.send(list_text[random])
 
 bot.run(token)
